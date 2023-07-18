@@ -33,6 +33,11 @@ public abstract class Vehicle {
     protected String type;
     protected int numberOfWheels;
 
+    public Vehicle(String type, int numberOfWheels) {
+        this.type = type;
+        this.numberOfWheels = numberOfWheels;
+    }
+
     public String getType() {
         return type;
     }
@@ -51,7 +56,7 @@ public abstract class Vehicle {
 
     // a method showVehicleDetails() that prints in console an informative message about the type and the numberOfWheels
     public void showVehicleDetails() {
-        System.out.println("The vehicle is a " + type + " and it has " + numberOfWheels);
+        System.out.println("The vehicle is a " + type + " and it has " + numberOfWheels + " wheels");
     }
 
     // an abstract method doVehicleSound()

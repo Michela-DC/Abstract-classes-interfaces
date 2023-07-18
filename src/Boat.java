@@ -15,7 +15,8 @@ public class Boat extends Vehicle {
     private double maxKnotsSpeed;
     private int boatKilosWeight;
 
-    public Boat(double maxSpeed, int weight) {
+    public Boat(String type, int wheels, double maxSpeed, int weight) {
+        super(type, wheels);
         this.maxKnotsSpeed = maxSpeed;
         this.boatKilosWeight = weight;
     }

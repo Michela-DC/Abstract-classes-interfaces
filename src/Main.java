@@ -5,8 +5,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        Car macchina = new Car(4, 4, 15300);
-        Boat barca = new Boat( 35.75, 1127);
+        Car macchina = new Car("Car", 4, 4, 15300);
+        Boat barca = new Boat( "Boat", 0, 35.75, 1127);
 
         macchina.showVehicleDetails();
         macchina.doVehicleSound();

@@ -25,8 +25,8 @@ public class Car extends Vehicle{
     private int numberOfDoors;
     private double carPrice;
 
-    public Car(int wheels, int doors, double price) {
-        this.numberOfWheels = wheels; // this.numberOfWheels è nella classe astratta Vehicle
+    public Car(String type, int wheels, int doors, double price) {
+        super(type, wheels);
         this.numberOfDoors = doors;
         this.carPrice = price;
     }
@@ -62,10 +62,10 @@ public class Car extends Vehicle{
 //    - se ha dei metodi dichiarati con abstract allora ne si deve per forza fare l'override nelle classi che la estendono
 //    - se voglio chiamare una sua variabile all'interno del costruttore della sottoclasse:
 //          --> se la variabile è dentro al costruttore della super classe allora nella sottoclasse bisogna fare
-//                public Sottoclasse(int variabileDellaSuperclasse) {
-//                    super(variabileDellaSuperclasse);
+//                public Sottoclasse(int variabileDaAssegnareAllaSuperclasse) {
+//                    super(variabileDaAssegnareAllaSuperclasse);
 //                }
-//             inoltre, dalla sottoclasse non si può assegnare niente a quella variabile perché viene già inizializzata nel costruttore della superclasse
+//
 //          --> se la variabile non è inizializzata nel costruttore della superclasse allora basta fare
 //                public Sottoclasse(int variabileDellaSuperclasse, int doors, double price) {
 //                   this.numberOfWheels = variabileDellaSuperclasse;
